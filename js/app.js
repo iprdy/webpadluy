@@ -141,21 +141,9 @@
     starModal.setAttribute('aria-hidden', 'false');
     document.body.classList.add('modal-open');
 
-    // Automatically play Voice Note
     const vnAudio = document.getElementById('vnAudio');
-    const bgAudio = document.getElementById('bgAudio');
     if (vnAudio) {
       vnAudio.currentTime = 0;
-      if (bgAudio && !bgAudio.paused) {
-        bgAudioWasPlaying = true;
-        bgAudio.volume = 0.15;
-      } else {
-        bgAudioWasPlaying = false;
-      }
-
-      vnAudio.play().catch(err => {
-        console.log("VN auto-play blocked/failed:", err);
-      });
     }
   }
 
@@ -412,9 +400,11 @@
 
   /* ---------- Voice Note Player Controller ---------- */
   const vnAudio = document.getElementById('vnAudio');
+  const vnPlayBtn = document.getElementById('vnPlayBtn');
   const vnProgressBar = document.getElementById('vnProgressBar');
   const vnProgressFill = document.getElementById('vnProgressFill');
   const vnTime = document.getElementById('vnTime');
+  const vinylWrapper = document.querySelector('.vinyl-wrapper');
 
   if (vnAudio) {
     // Force load the voice note to preload it automatically when entering the site
@@ -441,14 +431,50 @@
       if (vnTime) vnTime.textContent = formatTime(vnAudio.currentTime);
     });
 
-    vnAudio.addEventListener('ended', () => {
-      if (vnProgressFill) vnProgressFill.style.width = '0%';
-      if (vnTime && vnAudio.duration) vnTime.textContent = formatTime(vnAudio.duration);
+    vnAudio.addEventListener('play', () => {
+      if (vnPlayBtn) vnPlayBtn.innerHTML = '⏸';
+      if (vinylWrapper) vinylWrapper.classList.add('playing');
       const bgAudio = document.getElementById('bgAudio');
-      if (bgAudio) {
+      if (bgAudio && !bgAudio.paused) {
+        bgAudioWasPlaying = true;
+        bgAudio.volume = 0.15;
+      } else {
+        bgAudioWasPlaying = false;
+      }
+    });
+
+    vnAudio.addEventListener('pause', () => {
+      if (vnPlayBtn) vnPlayBtn.innerHTML = '▶';
+      if (vinylWrapper) vinylWrapper.classList.remove('playing');
+      const bgAudio = document.getElementById('bgAudio');
+      if (bgAudio && bgAudioWasPlaying) {
         bgAudio.volume = 1.0;
       }
     });
+
+    vnAudio.addEventListener('ended', () => {
+      if (vnPlayBtn) vnPlayBtn.innerHTML = '▶';
+      if (vinylWrapper) vinylWrapper.classList.remove('playing');
+      if (vnProgressFill) vnProgressFill.style.width = '0%';
+      if (vnTime && vnAudio.duration) vnTime.textContent = formatTime(vnAudio.duration);
+      const bgAudio = document.getElementById('bgAudio');
+      if (bgAudio && bgAudioWasPlaying) {
+        bgAudio.volume = 1.0;
+      }
+    });
+
+    if (vnPlayBtn) {
+      vnPlayBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (vnAudio.paused) {
+          vnAudio.play().catch(err => {
+            console.log("VN play failed:", err);
+          });
+        } else {
+          vnAudio.pause();
+        }
+      });
+    }
 
     if (vnProgressBar) {
       vnProgressBar.addEventListener('click', (e) => {

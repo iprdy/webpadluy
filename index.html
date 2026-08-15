@@ -735,10 +735,11 @@
         <div class="vinyl-label">For Rosa 🌹</div>
       </div>
 
-      <!-- Voice Note Player Component (No Play/Pause Button) -->
+      <!-- Voice Note Player Component (With Play/Pause Button) -->
       <div class="vn-player">
         <audio id="vnAudio" src="audio/vn-pangeran.ogg" preload="auto"></audio>
-        <div class="vn-info" style="padding-left: 0;">
+        <button class="vn-play-btn" id="vnPlayBtn" type="button" aria-label="Play/Pause voice note">▶</button>
+        <div class="vn-info">
           <div class="vn-title">✨ A Little Piece of Me, For You ✨</div>
           <div class="vn-slider-container">
             <div class="vn-progress-bar" id="vnProgressBar">
