@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Gladys Ayu Adelia | Our Story - Application JavaScript
+    | Our Story - Application JavaScript
    ========================================================================== */
 
 (function () {
@@ -38,7 +38,7 @@
       title: "A Birthday to Remember",
       date: "April 2026",
       src: "images/5.jpeg",
-      description: "Hari ulang tahunku terasa semakin spesial karena bisa merayakannya bersamamu. Di antara tawa, perayaan kecil, dan foto-foto yang kita ambil bersama, ada satu momen yang paling aku suka—saat kita berdiri berdampingan sambil memegang kamera. Mungkin terlihat seperti foto sederhana, tapi bagiku, foto itu menyimpan salah satu kenangan yang paling ingin aku ingat."
+      description: "Hari ulang tahunku terasa semakin spesial karena bisa merayakannya bersamamu. Di antara tawa, perayaan kecil, dan foto-foto yang kita ambil bersama, ada satu momen yang paling aku suka, saat kita berdiri berdampingan sambil memegang kamera. Mungkin terlihat seperti foto sederhana, tapi bagiku, foto itu menyimpan salah satu kenangan yang paling ingin aku ingat."
     },
     {
       title: "My First Flowers for You",
@@ -152,7 +152,7 @@
       } else {
         bgAudioWasPlaying = false;
       }
-      
+
       vnAudio.play().catch(err => {
         console.log("VN auto-play blocked/failed:", err);
       });
