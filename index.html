@@ -103,14 +103,19 @@
       <span class="intro-sparkle s--4">✨</span>
     </div>
 
-    <!-- Multi-Layered Blue SVG Clouds (Dense Sky Pack) -->
+    <!-- Layered Overlapping Clouds with Right-to-Left Continuous Pass -->
     <div class="cloud-layer" aria-hidden="true">
-      <svg class="cloud cloud--a cloud--shape-1" style="top:3%; left:-10%; width:320px;" viewBox="0 0 200 100"><path d="M40 70C22 70 10 58 10 44C10 30 22 20 36 20C40 8 54 0 68 0C84 0 98 10 102 24C118 22 132 34 132 48C132 50 132 52 131 54C144 56 154 66 154 78C154 90 144 100 130 100H36C18 100 4 88 4 74C4 72 10 70 40 70Z" fill="url(#cloudGradSkyBlue)"/></svg>
-      <svg class="cloud cloud--b cloud--shape-2" style="bottom:4%; right:-10%; width:350px;" viewBox="0 0 200 100"><path d="M20 60 C10 45 25 25 45 30 C55 15 80 15 95 25 C110 10 135 15 145 30 C165 20 185 35 180 55 C190 65 180 85 160 85 H30 C10 85 0 70 20 60 Z" fill="url(#cloudGradSapphire)"/></svg>
-      <svg class="cloud cloud--c cloud--shape-3" style="top:18%; right:8%; width:270px;" viewBox="0 0 200 100"><path d="M10 50 C20 30 50 30 65 40 C80 20 110 20 125 35 C140 25 170 30 175 45 C190 50 185 70 170 70 H25 C10 70 0 60 10 50 Z" fill="url(#cloudGradIce)"/></svg>
-      <svg class="cloud cloud--a cloud--shape-4" style="bottom:15%; left:2%; width:300px;" viewBox="0 0 200 100"><path d="M30 65 C15 50 30 30 50 35 C65 20 90 20 105 32 C120 15 150 22 160 40 C175 45 175 65 160 75 H40 C20 75 15 70 30 65 Z" fill="url(#cloudGradRoseBlue)"/></svg>
-      <svg class="cloud cloud--b cloud--shape-1" style="top:48%; left:-8%; width:260px;" viewBox="0 0 200 100"><path d="M40 70C22 70 10 58 10 44C10 30 22 20 36 20C40 8 54 0 68 0C84 0 98 10 102 24C118 22 132 34 132 48C132 50 132 52 131 54C144 56 154 66 154 78C154 90 144 100 130 100H36C18 100 4 88 4 74C4 72 10 70 40 70Z" fill="url(#cloudGradGoldBlue)"/></svg>
-      <svg class="cloud cloud--c cloud--shape-2" style="bottom:42%; right:-6%; width:250px;" viewBox="0 0 200 100"><path d="M20 60 C10 45 25 25 45 30 C55 15 80 15 95 25 C110 10 135 15 145 30 C165 20 185 35 180 55 C190 65 180 85 160 85 H30 C10 85 0 70 20 60 Z" fill="url(#cloudGradSkyBlue)"/></svg>
+      <!-- Cluster Top: Layered & Passing -->
+      <svg class="cloud cloud--shape-1 cloud--back cloud--pass-left" style="top:-20px; width:480px; --c-speed:42s; animation-delay:-12s;" viewBox="0 0 200 100"><path d="M40 70C22 70 10 58 10 44C10 30 22 20 36 20C40 8 54 0 68 0C84 0 98 10 102 24C118 22 132 34 132 48C132 50 132 52 131 54C144 56 154 66 154 78C154 90 144 100 130 100H36C18 100 4 88 4 74C4 72 10 70 40 70Z" fill="url(#cloudGradSkyBlue)"/></svg>
+      <svg class="cloud cloud--shape-2 cloud--front cloud--pass-left" style="top:15px; width:420px; --c-speed:35s; animation-delay:-2s;" viewBox="0 0 200 100"><path d="M20 60 C10 45 25 25 45 30 C55 15 80 15 95 25 C110 10 135 15 145 30 C165 20 185 35 180 55 C190 65 180 85 160 85 H30 C10 85 0 70 20 60 Z" fill="url(#cloudGradSapphire)"/></svg>
+      
+      <!-- Cluster Mid-Right: Overlapping Layer -->
+      <svg class="cloud cloud--shape-3 cloud--mid cloud--pass-left" style="top:32%; width:380px; --c-speed:48s; animation-delay:-25s;" viewBox="0 0 200 100"><path d="M10 50 C20 30 50 30 65 40 C80 20 110 20 125 35 C140 25 170 30 175 45 C190 50 185 70 170 70 H25 C10 70 0 60 10 50 Z" fill="url(#cloudGradIce)"/></svg>
+      
+      <!-- Cluster Bottom: Dense Overlapping Stack -->
+      <svg class="cloud cloud--shape-4 cloud--back cloud--pass-left" style="bottom:-30px; width:520px; --c-speed:52s; animation-delay:-8s;" viewBox="0 0 200 100"><path d="M30 65 C15 50 30 30 50 35 C65 20 90 20 105 32 C120 15 150 22 160 40 C175 45 175 65 160 75 H40 C20 75 15 70 30 65 Z" fill="url(#cloudGradRoseBlue)"/></svg>
+      <svg class="cloud cloud--shape-1 cloud--front cloud--pass-left" style="bottom:10px; width:450px; --c-speed:38s; animation-delay:-22s;" viewBox="0 0 200 100"><path d="M40 70C22 70 10 58 10 44C10 30 22 20 36 20C40 8 54 0 68 0C84 0 98 10 102 24C118 22 132 34 132 48C132 50 132 52 131 54C144 56 154 66 154 78C154 90 144 100 130 100H36C18 100 4 88 4 74C4 72 10 70 40 70Z" fill="url(#cloudGradGoldBlue)"/></svg>
+      <svg class="cloud cloud--shape-2 cloud--mid cloud--pass-left" style="bottom:45px; width:360px; --c-speed:46s; animation-delay:-32s;" viewBox="0 0 200 100"><path d="M20 60 C10 45 25 25 45 30 C55 15 80 15 95 25 C110 10 135 15 145 30 C165 20 185 35 180 55 C190 65 180 85 160 85 H30 C10 85 0 70 20 60 Z" fill="url(#cloudGradSkyBlue)"/></svg>
     </div>
 
     <div class="intro-card">
@@ -133,14 +138,18 @@
 
   <!-- ================= HERO ================= -->
   <section class="hero">
+    <!-- Hero Overlapping Passing Clouds (Right to Left) -->
     <div class="cloud-layer" aria-hidden="true">
-      <svg class="cloud cloud--a cloud--shape-1" style="top:5%; left:-10%; width:340px;" viewBox="0 0 200 100"><path d="M40 70C22 70 10 58 10 44C10 30 22 20 36 20C40 8 54 0 68 0C84 0 98 10 102 24C118 22 132 34 132 48C132 50 132 52 131 54C144 56 154 66 154 78C154 90 144 100 130 100H36C18 100 4 88 4 74C4 72 10 70 40 70Z" fill="url(#cloudGradSkyBlue)"/></svg>
-      <svg class="cloud cloud--b cloud--shape-2" style="top:12%; right:-8%; width:330px;" viewBox="0 0 200 100"><path d="M20 60 C10 45 25 25 45 30 C55 15 80 15 95 25 C110 10 135 15 145 30 C165 20 185 35 180 55 C190 65 180 85 160 85 H30 C10 85 0 70 20 60 Z" fill="url(#cloudGradSapphire)"/></svg>
-      <svg class="cloud cloud--c cloud--shape-3" style="top:38%; left:58%; width:260px;" viewBox="0 0 200 100"><path d="M10 50 C20 30 50 30 65 40 C80 20 110 20 125 35 C140 25 170 30 175 45 C190 50 185 70 170 70 H25 C10 70 0 60 10 50 Z" fill="url(#cloudGradIce)"/></svg>
-      <svg class="cloud cloud--b cloud--shape-4" style="bottom:2%; left:5%; width:360px;" viewBox="0 0 200 100"><path d="M30 65 C15 50 30 30 50 35 C65 20 90 20 105 32 C120 15 150 22 160 40 C175 45 175 65 160 75 H40 C20 75 15 70 30 65 Z" fill="url(#cloudGradRoseBlue)"/></svg>
-      <svg class="cloud cloud--a cloud--shape-2" style="top:45%; left:-8%; width:290px;" viewBox="0 0 200 100"><path d="M20 60 C10 45 25 25 45 30 C55 15 80 15 95 25 C110 10 135 15 145 30 C165 20 185 35 180 55 C190 65 180 85 160 85 H30 C10 85 0 70 20 60 Z" fill="url(#cloudGradGoldBlue)"/></svg>
-      <svg class="cloud cloud--c cloud--shape-1" style="bottom:18%; right:-6%; width:280px;" viewBox="0 0 200 100"><path d="M40 70C22 70 10 58 10 44C10 30 22 20 36 20C40 8 54 0 68 0C84 0 98 10 102 24C118 22 132 34 132 48C132 50 132 52 131 54C144 56 154 66 154 78C154 90 144 100 130 100H36C18 100 4 88 4 74C4 72 10 70 40 70Z" fill="url(#cloudGradSkyBlue)"/></svg>
+      <svg class="cloud cloud--shape-1 cloud--back cloud--pass-left" style="top:-15px; width:520px; --c-speed:46s; animation-delay:-10s;" viewBox="0 0 200 100"><path d="M40 70C22 70 10 58 10 44C10 30 22 20 36 20C40 8 54 0 68 0C84 0 98 10 102 24C118 22 132 34 132 48C132 50 132 52 131 54C144 56 154 66 154 78C154 90 144 100 130 100H36C18 100 4 88 4 74C4 72 10 70 40 70Z" fill="url(#cloudGradSkyBlue)"/></svg>
+      <svg class="cloud cloud--shape-2 cloud--front cloud--pass-left" style="top:25px; width:460px; --c-speed:38s; animation-delay:-22s;" viewBox="0 0 200 100"><path d="M20 60 C10 45 25 25 45 30 C55 15 80 15 95 25 C110 10 135 15 145 30 C165 20 185 35 180 55 C190 65 180 85 160 85 H30 C10 85 0 70 20 60 Z" fill="url(#cloudGradSapphire)"/></svg>
+      
+      <svg class="cloud cloud--shape-3 cloud--mid cloud--pass-left" style="top:42%; width:400px; --c-speed:50s; animation-delay:-30s;" viewBox="0 0 200 100"><path d="M10 50 C20 30 50 30 65 40 C80 20 110 20 125 35 C140 25 170 30 175 45 C190 50 185 70 170 70 H25 C10 70 0 60 10 50 Z" fill="url(#cloudGradIce)"/></svg>
+      
+      <svg class="cloud cloud--shape-4 cloud--back cloud--pass-left" style="bottom:-25px; width:550px; --c-speed:55s; animation-delay:-5s;" viewBox="0 0 200 100"><path d="M30 65 C15 50 30 30 50 35 C65 20 90 20 105 32 C120 15 150 22 160 40 C175 45 175 65 160 75 H40 C20 75 15 70 30 65 Z" fill="url(#cloudGradRoseBlue)"/></svg>
+      <svg class="cloud cloud--shape-2 cloud--front cloud--pass-left" style="bottom:20px; width:440px; --c-speed:40s; animation-delay:-18s;" viewBox="0 0 200 100"><path d="M20 60 C10 45 25 25 45 30 C55 15 80 15 95 25 C110 10 135 15 145 30 C165 20 185 35 180 55 C190 65 180 85 160 85 H30 C10 85 0 70 20 60 Z" fill="url(#cloudGradGoldBlue)"/></svg>
+      <svg class="cloud cloud--shape-1 cloud--mid cloud--pass-left" style="bottom:50px; width:390px; --c-speed:48s; animation-delay:-35s;" viewBox="0 0 200 100"><path d="M40 70C22 70 10 58 10 44C10 30 22 20 36 20C40 8 54 0 68 0C84 0 98 10 102 24C118 22 132 34 132 48C132 50 132 52 131 54C144 56 154 66 154 78C154 90 144 100 130 100H36C18 100 4 88 4 74C4 72 10 70 40 70Z" fill="url(#cloudGradSkyBlue)"/></svg>
     </div>
+
     <div class="hero-content">
       <span class="eyebrow">☁ Our little corner of the sky</span>
       <h1>Gladys Ayu Adelia</h1>
@@ -156,10 +165,10 @@
   <!-- ================= TIMELINE ================= -->
   <section class="timeline" id="timeline">
     <div class="cloud-layer cloud-layer--soft" aria-hidden="true">
-      <svg class="cloud cloud--a cloud--shape-3" style="top:2%; right:-6%; width:280px;" viewBox="0 0 200 100"><path d="M10 50 C20 30 50 30 65 40 C80 20 110 20 125 35 C140 25 170 30 175 45 C190 50 185 70 170 70 H25 C10 70 0 60 10 50 Z" fill="url(#cloudGradSapphire)"/></svg>
-      <svg class="cloud cloud--b cloud--shape-4" style="bottom:1%; left:-8%; width:300px;" viewBox="0 0 200 100"><path d="M30 65 C15 50 30 30 50 35 C65 20 90 20 105 32 C120 15 150 22 160 40 C175 45 175 65 160 75 H40 C20 75 15 70 30 65 Z" fill="url(#cloudGradSkyBlue)"/></svg>
-      <svg class="cloud cloud--c cloud--shape-1" style="top:32%; left:-7%; width:270px;" viewBox="0 0 200 100"><path d="M40 70C22 70 10 58 10 44C10 30 22 20 36 20C40 8 54 0 68 0C84 0 98 10 102 24C118 22 132 34 132 48C132 50 132 52 131 54C144 56 154 66 154 78C154 90 144 100 130 100H36C18 100 4 88 4 74C4 72 10 70 40 70Z" fill="url(#cloudGradIce)"/></svg>
-      <svg class="cloud cloud--a cloud--shape-2" style="top:60%; right:-8%; width:290px;" viewBox="0 0 200 100"><path d="M20 60 C10 45 25 25 45 30 C55 15 80 15 95 25 C110 10 135 15 145 30 C165 20 185 35 180 55 C190 65 180 85 160 85 H30 C10 85 0 70 20 60 Z" fill="url(#cloudGradRoseBlue)"/></svg>
+      <svg class="cloud cloud--shape-3 cloud--back cloud--pass-left" style="top:-10px; width:450px; --c-speed:44s; animation-delay:-14s;" viewBox="0 0 200 100"><path d="M10 50 C20 30 50 30 65 40 C80 20 110 20 125 35 C140 25 170 30 175 45 C190 50 185 70 170 70 H25 C10 70 0 60 10 50 Z" fill="url(#cloudGradSapphire)"/></svg>
+      <svg class="cloud cloud--shape-4 cloud--front cloud--pass-left" style="top:30px; width:390px; --c-speed:36s; animation-delay:-28s;" viewBox="0 0 200 100"><path d="M30 65 C15 50 30 30 50 35 C65 20 90 20 105 32 C120 15 150 22 160 40 C175 45 175 65 160 75 H40 C20 75 15 70 30 65 Z" fill="url(#cloudGradSkyBlue)"/></svg>
+      <svg class="cloud cloud--shape-1 cloud--mid cloud--pass-left" style="top:40%; width:420px; --c-speed:52s; animation-delay:-8s;" viewBox="0 0 200 100"><path d="M40 70C22 70 10 58 10 44C10 30 22 20 36 20C40 8 54 0 68 0C84 0 98 10 102 24C118 22 132 34 132 48C132 50 132 52 131 54C144 56 154 66 154 78C154 90 144 100 130 100H36C18 100 4 88 4 74C4 72 10 70 40 70Z" fill="url(#cloudGradIce)"/></svg>
+      <svg class="cloud cloud--shape-2 cloud--back cloud--pass-left" style="bottom:-20px; width:480px; --c-speed:48s; animation-delay:-20s;" viewBox="0 0 200 100"><path d="M20 60 C10 45 25 25 45 30 C55 15 80 15 95 25 C110 10 135 15 145 30 C165 20 185 35 180 55 C190 65 180 85 160 85 H30 C10 85 0 70 20 60 Z" fill="url(#cloudGradRoseBlue)"/></svg>
     </div>
     <div class="section-inner">
       <div class="section-head reveal">
@@ -257,10 +266,10 @@
   <!-- ================= GALLERY ================= -->
   <section class="gallery" id="gallery">
     <div class="cloud-layer cloud-layer--soft" aria-hidden="true">
-      <svg class="cloud cloud--a cloud--shape-2" style="top:1%; left:-8%; width:300px;" viewBox="0 0 200 100"><path d="M20 60 C10 45 25 25 45 30 C55 15 80 15 95 25 C110 10 135 15 145 30 C165 20 185 35 180 55 C190 65 180 85 160 85 H30 C10 85 0 70 20 60 Z" fill="url(#cloudGradSkyBlue)"/></svg>
-      <svg class="cloud cloud--c cloud--shape-1" style="top:25%; right:-7%; width:290px;" viewBox="0 0 200 100"><path d="M40 70C22 70 10 58 10 44C10 30 22 20 36 20C40 8 54 0 68 0C84 0 98 10 102 24C118 22 132 34 132 48C132 50 132 52 131 54C144 56 154 66 154 78C154 90 144 100 130 100H36C18 100 4 88 4 74C4 72 10 70 40 70Z" fill="url(#cloudGradSapphire)"/></svg>
-      <svg class="cloud cloud--b cloud--shape-4" style="bottom:12%; left:-6%; width:280px;" viewBox="0 0 200 100"><path d="M30 65 C15 50 30 30 50 35 C65 20 90 20 105 32 C120 15 150 22 160 40 C175 45 175 65 160 75 H40 C20 75 15 70 30 65 Z" fill="url(#cloudGradIce)"/></svg>
-      <svg class="cloud cloud--a cloud--shape-3" style="bottom:2%; right:-8%; width:310px;" viewBox="0 0 200 100"><path d="M10 50 C20 30 50 30 65 40 C80 20 110 20 125 35 C140 25 170 30 175 45 C190 50 185 70 170 70 H25 C10 70 0 60 10 50 Z" fill="url(#cloudGradGoldBlue)"/></svg>
+      <svg class="cloud cloud--shape-2 cloud--back cloud--pass-left" style="top:-15px; width:490px; --c-speed:42s; animation-delay:-16s;" viewBox="0 0 200 100"><path d="M20 60 C10 45 25 25 45 30 C55 15 80 15 95 25 C110 10 135 15 145 30 C165 20 185 35 180 55 C190 65 180 85 160 85 H30 C10 85 0 70 20 60 Z" fill="url(#cloudGradSkyBlue)"/></svg>
+      <svg class="cloud cloud--shape-1 cloud--front cloud--pass-left" style="top:25px; width:410px; --c-speed:34s; animation-delay:-30s;" viewBox="0 0 200 100"><path d="M40 70C22 70 10 58 10 44C10 30 22 20 36 20C40 8 54 0 68 0C84 0 98 10 102 24C118 22 132 34 132 48C132 50 132 52 131 54C144 56 154 66 154 78C154 90 144 100 130 100H36C18 100 4 88 4 74C4 72 10 70 40 70Z" fill="url(#cloudGradSapphire)"/></svg>
+      <svg class="cloud cloud--shape-4 cloud--mid cloud--pass-left" style="bottom:25%; width:440px; --c-speed:50s; animation-delay:-6s;" viewBox="0 0 200 100"><path d="M30 65 C15 50 30 30 50 35 C65 20 90 20 105 32 C120 15 150 22 160 40 C175 45 175 65 160 75 H40 C20 75 15 70 30 65 Z" fill="url(#cloudGradIce)"/></svg>
+      <svg class="cloud cloud--shape-3 cloud--back cloud--pass-left" style="bottom:-20px; width:510px; --c-speed:46s; animation-delay:-22s;" viewBox="0 0 200 100"><path d="M10 50 C20 30 50 30 65 40 C80 20 110 20 125 35 C140 25 170 30 175 45 C190 50 185 70 170 70 H25 C10 70 0 60 10 50 Z" fill="url(#cloudGradGoldBlue)"/></svg>
     </div>
     <div class="section-inner">
       <div class="section-head reveal">
@@ -291,9 +300,9 @@
   <!-- ================= REASONS ================= -->
   <section class="reasons" id="reasons">
     <div class="cloud-layer cloud-layer--soft" aria-hidden="true">
-      <svg class="cloud cloud--b cloud--shape-4" style="top:4%; right:-8%; width:310px;" viewBox="0 0 200 100"><path d="M30 65 C15 50 30 30 50 35 C65 20 90 20 105 32 C120 15 150 22 160 40 C175 45 175 65 160 75 H40 C20 75 15 70 30 65 Z" fill="url(#cloudGradSkyBlue)"/></svg>
-      <svg class="cloud cloud--a cloud--shape-3" style="bottom:1%; left:-7%; width:290px;" viewBox="0 0 200 100"><path d="M10 50 C20 30 50 30 65 40 C80 20 110 20 125 35 C140 25 170 30 175 45 C190 50 185 70 170 70 H25 C10 70 0 60 10 50 Z" fill="url(#cloudGradSapphire)"/></svg>
-      <svg class="cloud cloud--c cloud--shape-1" style="top:40%; left:-6%; width:270px;" viewBox="0 0 200 100"><path d="M40 70C22 70 10 58 10 44C10 30 22 20 36 20C40 8 54 0 68 0C84 0 98 10 102 24C118 22 132 34 132 48C132 50 132 52 131 54C144 56 154 66 154 78C154 90 144 100 130 100H36C18 100 4 88 4 74C4 72 10 70 40 70Z" fill="url(#cloudGradIce)"/></svg>
+      <svg class="cloud cloud--shape-4 cloud--back cloud--pass-left" style="top:-10px; width:470px; --c-speed:40s; animation-delay:-12s;" viewBox="0 0 200 100"><path d="M30 65 C15 50 30 30 50 35 C65 20 90 20 105 32 C120 15 150 22 160 40 C175 45 175 65 160 75 H40 C20 75 15 70 30 65 Z" fill="url(#cloudGradSkyBlue)"/></svg>
+      <svg class="cloud cloud--shape-3 cloud--front cloud--pass-left" style="top:25px; width:410px; --c-speed:36s; animation-delay:-26s;" viewBox="0 0 200 100"><path d="M10 50 C20 30 50 30 65 40 C80 20 110 20 125 35 C140 25 170 30 175 45 C190 50 185 70 170 70 H25 C10 70 0 60 10 50 Z" fill="url(#cloudGradSapphire)"/></svg>
+      <svg class="cloud cloud--shape-1 cloud--mid cloud--pass-left" style="bottom:-20px; width:500px; --c-speed:48s; animation-delay:-18s;" viewBox="0 0 200 100"><path d="M40 70C22 70 10 58 10 44C10 30 22 20 36 20C40 8 54 0 68 0C84 0 98 10 102 24C118 22 132 34 132 48C132 50 132 52 131 54C144 56 154 66 154 78C154 90 144 100 130 100H36C18 100 4 88 4 74C4 72 10 70 40 70Z" fill="url(#cloudGradIce)"/></svg>
     </div>
     <div class="section-inner">
       <div class="section-head reveal">
@@ -308,9 +317,9 @@
   <section class="little" id="little">
     <div class="little-particles"></div>
     <div class="cloud-layer cloud-layer--soft" aria-hidden="true">
-      <svg class="cloud cloud--c cloud--shape-2" style="top:2%; left:-7%; width:290px;" viewBox="0 0 200 100"><path d="M20 60 C10 45 25 25 45 30 C55 15 80 15 95 25 C110 10 135 15 145 30 C165 20 185 35 180 55 C190 65 180 85 160 85 H30 C10 85 0 70 20 60 Z" fill="url(#cloudGradSapphire)"/></svg>
-      <svg class="cloud cloud--b cloud--shape-1" style="bottom:4%; right:-8%; width:320px;" viewBox="0 0 200 100"><path d="M40 70C22 70 10 58 10 44C10 30 22 20 36 20C40 8 54 0 68 0C84 0 98 10 102 24C118 22 132 34 132 48C132 50 132 52 131 54C144 56 154 66 154 78C154 90 144 100 130 100H36C18 100 4 88 4 74C4 72 10 70 40 70Z" fill="url(#cloudGradSkyBlue)"/></svg>
-      <svg class="cloud cloud--a cloud--shape-4" style="top:45%; right:-6%; width:270px;" viewBox="0 0 200 100"><path d="M30 65 C15 50 30 30 50 35 C65 20 90 20 105 32 C120 15 150 22 160 40 C175 45 175 65 160 75 H40 C20 75 15 70 30 65 Z" fill="url(#cloudGradRoseBlue)"/></svg>
+      <svg class="cloud cloud--shape-2 cloud--back cloud--pass-left" style="top:-15px; width:480px; --c-speed:44s; animation-delay:-14s;" viewBox="0 0 200 100"><path d="M20 60 C10 45 25 25 45 30 C55 15 80 15 95 25 C110 10 135 15 145 30 C165 20 185 35 180 55 C190 65 180 85 160 85 H30 C10 85 0 70 20 60 Z" fill="url(#cloudGradSapphire)"/></svg>
+      <svg class="cloud cloud--shape-1 cloud--front cloud--pass-left" style="bottom:-20px; width:520px; --c-speed:38s; animation-delay:-24s;" viewBox="0 0 200 100"><path d="M40 70C22 70 10 58 10 44C10 30 22 20 36 20C40 8 54 0 68 0C84 0 98 10 102 24C118 22 132 34 132 48C132 50 132 52 131 54C144 56 154 66 154 78C154 90 144 100 130 100H36C18 100 4 88 4 74C4 72 10 70 40 70Z" fill="url(#cloudGradSkyBlue)"/></svg>
+      <svg class="cloud cloud--shape-4 cloud--mid cloud--pass-left" style="top:42%; width:430px; --c-speed:50s; animation-delay:-8s;" viewBox="0 0 200 100"><path d="M30 65 C15 50 30 30 50 35 C65 20 90 20 105 32 C120 15 150 22 160 40 C175 45 175 65 160 75 H40 C20 75 15 70 30 65 Z" fill="url(#cloudGradRoseBlue)"/></svg>
     </div>
     <div class="section-inner">
       <div class="section-head reveal">
@@ -324,8 +333,8 @@
   <!-- ================= COUNTDOWN ================= -->
   <section class="countdown" id="countdown">
     <div class="cloud-layer cloud-layer--soft" aria-hidden="true">
-      <svg class="cloud cloud--a cloud--shape-4" style="top:1%; right:-7%; width:290px;" viewBox="0 0 200 100"><path d="M30 65 C15 50 30 30 50 35 C65 20 90 20 105 32 C120 15 150 22 160 40 C175 45 175 65 160 75 H40 C20 75 15 70 30 65 Z" fill="url(#cloudGradSkyBlue)"/></svg>
-      <svg class="cloud cloud--b cloud--shape-3" style="bottom:2%; left:-6%; width:310px;" viewBox="0 0 200 100"><path d="M10 50 C20 30 50 30 65 40 C80 20 110 20 125 35 C140 25 170 30 175 45 C190 50 185 70 170 70 H25 C10 70 0 60 10 50 Z" fill="url(#cloudGradSapphire)"/></svg>
+      <svg class="cloud cloud--shape-4 cloud--back cloud--pass-left" style="top:-10px; width:460px; --c-speed:42s; animation-delay:-18s;" viewBox="0 0 200 100"><path d="M30 65 C15 50 30 30 50 35 C65 20 90 20 105 32 C120 15 150 22 160 40 C175 45 175 65 160 75 H40 C20 75 15 70 30 65 Z" fill="url(#cloudGradSkyBlue)"/></svg>
+      <svg class="cloud cloud--shape-3 cloud--front cloud--pass-left" style="bottom:-20px; width:510px; --c-speed:36s; animation-delay:-6s;" viewBox="0 0 200 100"><path d="M10 50 C20 30 50 30 65 40 C80 20 110 20 125 35 C140 25 170 30 175 45 C190 50 185 70 170 70 H25 C10 70 0 60 10 50 Z" fill="url(#cloudGradSapphire)"/></svg>
     </div>
     <div class="section-inner">
       <div class="section-head reveal">
@@ -339,16 +348,16 @@
     </div>
   </section>
 
-  <!-- ================= FINALE (Midnight Sapphire Sky + Night Clouds) ================= -->
+  <!-- ================= FINALE (Midnight Sapphire Sky + Layered Passing Clouds) ================= -->
   <section class="finale" id="finale">
     <div class="stars" id="starsLayer" aria-hidden="true"></div>
     
-    <!-- Night Sky Starlight SVG Clouds in Finale -->
+    <!-- Night Sky Starlight SVG Clouds in Finale: Layered & Passing -->
     <div class="cloud-layer cloud-layer--finale" aria-hidden="true">
-      <svg class="cloud cloud--a cloud--shape-1" style="top:4%; left:-8%; width:330px; opacity:0.45;" viewBox="0 0 200 100"><path d="M40 70C22 70 10 58 10 44C10 30 22 20 36 20C40 8 54 0 68 0C84 0 98 10 102 24C118 22 132 34 132 48C132 50 132 52 131 54C144 56 154 66 154 78C154 90 144 100 130 100H36C18 100 4 88 4 74C4 72 10 70 40 70Z" fill="url(#cloudGradSkyBlue)"/></svg>
-      <svg class="cloud cloud--b cloud--shape-2" style="top:10%; right:-6%; width:340px; opacity:0.4;" viewBox="0 0 200 100"><path d="M20 60 C10 45 25 25 45 30 C55 15 80 15 95 25 C110 10 135 15 145 30 C165 20 185 35 180 55 C190 65 180 85 160 85 H30 C10 85 0 70 20 60 Z" fill="url(#cloudGradSapphire)"/></svg>
-      <svg class="cloud cloud--c cloud--shape-4" style="bottom:6%; left:-5%; width:360px; opacity:0.5;" viewBox="0 0 200 100"><path d="M30 65 C15 50 30 30 50 35 C65 20 90 20 105 32 C120 15 150 22 160 40 C175 45 175 65 160 75 H40 C20 75 15 70 30 65 Z" fill="url(#cloudGradIce)"/></svg>
-      <svg class="cloud cloud--a cloud--shape-3" style="bottom:2%; right:-8%; width:350px; opacity:0.45;" viewBox="0 0 200 100"><path d="M10 50 C20 30 50 30 65 40 C80 20 110 20 125 35 C140 25 170 30 175 45 C190 50 185 70 170 70 H25 C10 70 0 60 10 50 Z" fill="url(#cloudGradSkyBlue)"/></svg>
+      <svg class="cloud cloud--shape-1 cloud--back cloud--pass-left" style="top:-15px; width:540px; opacity:0.45; --c-speed:48s; animation-delay:-12s;" viewBox="0 0 200 100"><path d="M40 70C22 70 10 58 10 44C10 30 22 20 36 20C40 8 54 0 68 0C84 0 98 10 102 24C118 22 132 34 132 48C132 50 132 52 131 54C144 56 154 66 154 78C154 90 144 100 130 100H36C18 100 4 88 4 74C4 72 10 70 40 70Z" fill="url(#cloudGradSkyBlue)"/></svg>
+      <svg class="cloud cloud--shape-2 cloud--front cloud--pass-left" style="top:25px; width:480px; opacity:0.4; --c-speed:38s; animation-delay:-28s;" viewBox="0 0 200 100"><path d="M20 60 C10 45 25 25 45 30 C55 15 80 15 95 25 C110 10 135 15 145 30 C165 20 185 35 180 55 C190 65 180 85 160 85 H30 C10 85 0 70 20 60 Z" fill="url(#cloudGradSapphire)"/></svg>
+      <svg class="cloud cloud--shape-4 cloud--back cloud--pass-left" style="bottom:-30px; width:580px; opacity:0.55; --c-speed:52s; animation-delay:-8s;" viewBox="0 0 200 100"><path d="M30 65 C15 50 30 30 50 35 C65 20 90 20 105 32 C120 15 150 22 160 40 C175 45 175 65 160 75 H40 C20 75 15 70 30 65 Z" fill="url(#cloudGradIce)"/></svg>
+      <svg class="cloud cloud--shape-3 cloud--front cloud--pass-left" style="bottom:15px; width:490px; opacity:0.5; --c-speed:42s; animation-delay:-20s;" viewBox="0 0 200 100"><path d="M10 50 C20 30 50 30 65 40 C80 20 110 20 125 35 C140 25 170 30 175 45 C190 50 185 70 170 70 H25 C10 70 0 60 10 50 Z" fill="url(#cloudGradSkyBlue)"/></svg>
     </div>
 
     <div class="finale-content">
