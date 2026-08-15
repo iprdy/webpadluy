@@ -437,7 +437,7 @@
       const bgAudio = document.getElementById('bgAudio');
       if (bgAudio && !bgAudio.paused) {
         bgAudioWasPlaying = true;
-        bgAudio.volume = 0.15;
+        bgAudio.volume = 0.03;
       } else {
         bgAudioWasPlaying = false;
       }
