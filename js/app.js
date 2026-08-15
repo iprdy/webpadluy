@@ -6,80 +6,60 @@
   'use strict';
 
   /* ---------- CONFIG ---------- */
-  const BIRTHDAY_DATE = "2026-12-24"; // Format YYYY-MM-DD
+  const BIRTHDAY_DATE = "2026-08-20"; // Format YYYY-MM-DD
+  let bgAudioWasPlaying = false;
 
   const galleryItems = [
     {
-      title: "Underwater Dreams With You",
+      title: "First Romantic Photo",
+      date: "September 2025",
+      src: "images/1.jpeg",
+      description: "Saat itu, kamu sempat dipaksa oleh temanmu untuk foto berdua denganku. Aku masih ingat betapa kagetnya aku ketika kamu langsung bersedia dan bahkan menyentuh bahuku saat berfoto. Mungkin bagi kamu itu hanya sebuah foto sederhana, tapi entah kenapa, momen kecil itu terus melekat di ingatanku."
+    },
+    {
+      title: "Making Time for Us",
+      date: "May 2025",
+      src: "images/2.jpeg",
+      description: "Ketika kita mulai sibuk dengan urusan dan pekerjaan masing-masing, waktu bersama menjadi semakin sulit untuk ditemukan. Namun, di tengah padatnya hari dan banyaknya hal yang harus diselesaikan, kita tetap berusaha meluangkan waktu untuk satu sama lain. Mungkin waktunya tidak selalu lama, tetapi setiap kesempatan untuk bersama selalu terasa berharga."
+    },
+    {
+      title: "So Proud of You",
       date: "January 2026",
-      src: "images/aquariumDate.png",
-      description: "Saat berdiri berdua di depan dinding kaca akuarium raksasa, menyaksikan ribuan ikan melintas bebas di bawah pendar cahaya biru dreamlike. Kehangatan tanganmu di jemariku membuat segalanya terasa begitu sempurna."
+      src: "images/3.jpeg",
+      description: "Hari itu kamu baru saja menyelesaikan sidang penulisan ilmiah. Aku tahu ada banyak usaha, waktu, dan rasa lelah yang kamu lalui sampai akhirnya bisa berdiri di sana dan menyelesaikannya. Melihat kamu berhasil melewati semuanya membuatku benar-benar bangga. Mungkin itu adalah pencapaianmu, tapi entah kenapa, melihatmu berhasil selalu terasa seperti sesuatu yang juga ingin aku rayakan bersamamu."
     },
     {
-      title: "Lost in the City With You",
-      date: "April 2025",
-      src: "images/Blok-MDate.png",
-      description: "Menelusuri jalanan kota di sore hari, bergandengan tangan tanpa peduli keramaian di sekeliling. Dari foto strip kecil hingga gelak tawa di trotoar — setiap sudut kota terasa jauh lebih hangat saat bersamamu."
+      title: "A Day Just For Us",
+      date: "January 2026",
+      src: "images/4.jpeg",
+      description: "Tidak ada cerita besar di balik foto ini, hanya dua orang yang sedang menikmati waktu bersama. Dari senyum, ekspresi imut, sampai momen-momen kecil yang mungkin terlihat sederhana, semuanya tetap menjadi bagian dari cerita kita. Kadang, kebahagiaan memang sesederhana bisa tersenyum bersama orang yang kita sayang."
     },
     {
-      title: "Breaking Fast Together",
-      date: "March 2025",
-      src: "images/bukberRicheese.jpg",
-      description: "Momen sederhana berbuka puasa bersama. Canda tawa di meja makan dan tatapan manismu yang menenangkan menjadikan hidangan biasa terasa seperti santapan paling lezat di dunia."
+      title: "A Birthday to Remember",
+      date: "April 2026",
+      src: "images/5.jpeg",
+      description: "Hari ulang tahunku terasa semakin spesial karena bisa merayakannya bersamamu. Di antara tawa, perayaan kecil, dan foto-foto yang kita ambil bersama, ada satu momen yang paling aku suka—saat kita berdiri berdampingan sambil memegang kamera. Mungkin terlihat seperti foto sederhana, tapi bagiku, foto itu menyimpan salah satu kenangan yang paling ingin aku ingat."
     },
     {
-      title: "A Night Just For Us",
-      date: "December 2024",
-      src: "images/fancyDinner.jpg",
-      description: "Malam yang syahdu khusus untuk kita berdua. Di bawah pendar lampu restoran yang hangat, kita bertukar cerita, impian, dan tatapan yang mengisyaratkan betapa berharganya kita satu sama lain."
+      title: "My First Flowers for You",
+      date: "August 2026",
+      src: "images/6.jpeg",
+      description: "Hari itu aku memberikan bunga pertamaku kepadamu. Mungkin terlihat sederhana, tapi sebenarnya ada banyak perasaan yang ingin kusampaikan lewat bunga itu. Aku hanya ingin melihat senyummu dan membuatmu merasa sedikit lebih spesial. Dan sampai sekarang, momen ketika pertama kali memberimu bunga tetap menjadi salah satu kenangan yang paling manis untukku."
+    }
+  ];
+
+  const birthdayItems = [
+    {
+      title: "Your Sweet Birthday Celebration (2024)",
+      date: "August 2024",
+      src: "images/hbd1.jpeg",
+      description: "Di tahun ini, aku melihat sisi dirimu yang semakin ceria dan penuh semangat. Kamu tumbuh menjadi seseorang yang mampu memimpin, berani mengambil keputusan, dan selalu bisa diandalkan dalam berbagai hal. Melihatmu berkembang menjadi versi dirimu yang seperti itu membuatku semakin kagum, dan tanpa kusadari, membuatku semakin jatuh cinta kepadamu."
     },
     {
-      title: "Competitive, But So In Love",
-      date: "February 2025",
-      src: "images/gamingDate.jpg",
-      description: "Momen main game bareng yang seru dan penuh gelak tawa. Walau kadang kita sama-sama tak mau kalah, pada akhirnya senyuman bahagia di wajahmulah yang selalu memenangkan hatiku."
-    },
-    {
-      title: "Part of Your Family Now",
-      date: "January 2025",
-      src: "images/holidayWithHerFamily.jpg",
-      description: "Saat bisa berkumpul dan berlibur bersama keluarga terkasihmu. Diterima dengan begitu hangat dan melihatmu tersenyum bahagia bersama mereka adalah salah satu kado terindah dalam hidupku."
-    },
-    {
-      title: "Quiet Moments in Our Favorite Place",
-      date: "December 2024",
-      src: "images/libraryDate.jpg",
-      description: "Duduk bersama di sudut perpustakaan favorit yang tenang. Tanpa perlu banyak kata, hanya ditemani aroma buku dan kehadiranmu di sisiku, hatiku sudah merasa sangat utuh dan damai."
-    },
-    {
-      title: "Creating Art, Creating Memories",
-      date: "February 2025",
-      src: "images/paintingDate.jpg",
-      description: "Sesi melukis bersama dengan jemari berbalut cat warna-warni. Setiap goresan kuas di atas kanvas bukan sekadar menciptakan gambar, melainkan mengukir kenangan indah yang takkan pernah pudar."
-    },
-    {
-      title: "Our First Date",
-      date: "April 2024",
-      src: "images/firstDate.jpg",
-      description: "Kencan pertama kita yang dipenuhi rasa gugup sekaligus kebahagiaan luar biasa. Dari momen rumah hantu hingga kedai kopi kecil, hari ini menjadi awal dari perjalanan panjang cinta kita."
-    },
-    {
-      title: "Kebun Raya Bogor with You",
-      date: "November 2025",
-      src: "images/kebunRayaBogor.jpeg",
-      description: "Berjalan santai di bawah rindangnya pepohonan hijau Kebun Raya Bogor. Udara sejuk, gemericik angin, dan tawa bahagiamu membuat hari itu terasa begitu magis dan tak terlupakan."
-    },
-    {
-      title: "Our First Braga Trip",
-      date: "November 2025",
-      src: "images/Braga.jpeg",
-      description: "Menyusuri nuansa klasik Jalan Braga Bandung. Setiap sudut arsitektur bersejarah terasa jauh lebih hidup dan romantis saat kita melangkah bersama sambil menikmati malam."
-    },
-    {
-      title: "My First Bandung Solo Trip",
-      date: "October 2025",
-      src: "images/firstBandung.jpeg",
-      description: "Perjalanan menuju Bandung yang membawaku lebih dekat kepadamu. Karena sejauh apapun jarak Bekasi – Bandung, setiap langkahku selalu tahu ke mana tujuan akhirnya: kamu."
+      title: "Another Beautiful Year With You (2025)",
+      date: "August 2025",
+      src: "images/hbd2.jpeg",
+      description: "Di tahun kedua kita merayakan ulang tahunmu bersama, aku melihat sosok wanita yang semakin dewasa dan bijaksana. Kamu bukan hanya seseorang yang selalu ada di sisiku, tetapi juga seseorang yang mampu membimbingku agar hidupku menjadi lebih terarah. Dari caramu berpikir, menghadapi berbagai hal, dan selalu berusaha memberikan yang terbaik, aku semakin melihat sosok wanita yang sangat aku kagumi."
     }
   ];
 
@@ -108,11 +88,11 @@
 
   const bento = [
     { icon: "🎵", tag: "Lo-fi & Pop", title: "Your Music", text: "You love keshi, and your favorite band is The Overtune. We've always said, 'One day we'll watch keshi together.' Someday, I want to stand next to you, singing your favorite songs under the same lights.", wide: false },
-    { icon: "🥬", tag: "Simple & Honest", title: "Your Favorite", text: "You love jukut goreng. No expensive desserts, no complicated meals — just something warm, humble, and comforting. It fits you perfectly.", wide: false },
-    { icon: "💧", tag: "Just Water", title: "Your Comfort", text: "Every time we go out, you order water. Always water. It says so much about you — you don't need anything extra to feel content.", wide: false },
-    { icon: "🍨", tag: "Our Gelato Place", title: "Your Peace", text: "Whenever we don't know where to go, we end up getting gelato. That little place has seen our random talks, quiet moments, and everything in between.", wide: false },
+    { icon: "🥟", tag: "Dimsum Lover", title: "Your Favorite Food", text: "You absolutely love eating dimsum. No matter how long or tiring your day has been, this simple, warm comfort food never fails to immediately brighten up your mood, bring you absolute joy, and put the sweetest smile back on your face.", wide: false },
+    { icon: "💧", tag: "Just Water", title: "Your Comfort", text: "Every single time we go out on our dates, you almost always order a simple glass of water. It is a small but beautiful detail that says so much about your humble soul — you truly do not need anything extra or fancy in this life to feel completely content.", wide: false },
+    { icon: "🍗", tag: "Ayam Madura", title: "Your Peace", text: "For you, true peace and relaxation is as simple as sitting down and enjoying a plate of your favorite Ayam Madura. Savoring every single delicious bite of this comfort dish is always more than enough to completely clear your mind and bring you comfort after a long, tiring day.", wide: false },
     { icon: "💖", tag: "The Way You Fix Your Hijab", title: "Your Beauty", text: "The way you adjust your hijab when you're thinking, the small movement when you're nervous, the smile you try to hide but can't fully. I notice those little things, and every one makes you even more beautiful to me.", wide: true },
-    { icon: "🐾", tag: "Sepi & MeyMey", title: "Your Soft Spot", text: "You have the softest heart when it comes to cats. Sepi was once a big part of your life, and now there's MeyMey by your side. Your heart is warm in ways you don't even notice. Though let's be honest — your ultimate favorite is still Satria Rhamdani.", wide: true }
+    { icon: "🧕", tag: "Helping Others", title: "Your Soft Spot", text: "Your incredibly soft and gentle side always shines the absolute brightest whenever you genuinely reach out to help those in need around you. The pure kindness and empathy you show to others is a rare, true beauty that I will forever admire and cherish about you.", wide: true }
   ];
 
   /* ---------- Gallery Lightbox Modal ---------- */
@@ -160,6 +140,27 @@
     starModal.classList.add('active');
     starModal.setAttribute('aria-hidden', 'false');
     document.body.classList.add('modal-open');
+
+    // Automatically play Voice Note
+    const vnAudio = document.getElementById('vnAudio');
+    const bgAudio = document.getElementById('bgAudio');
+    if (vnAudio) {
+      vnAudio.currentTime = 0;
+      if (bgAudio && !bgAudio.paused) {
+        bgAudioWasPlaying = true;
+        bgAudio.pause();
+        const musicToggle = document.getElementById('musicToggle');
+        const musicIcon = document.getElementById('musicIcon');
+        if (musicToggle) musicToggle.classList.remove('playing');
+        if (musicIcon) musicIcon.textContent = '🎵';
+      } else {
+        bgAudioWasPlaying = false;
+      }
+      
+      vnAudio.play().catch(err => {
+        console.log("VN auto-play blocked/failed:", err);
+      });
+    }
   }
 
   function closeStarModal() {
@@ -167,6 +168,19 @@
     starModal.classList.remove('active');
     starModal.setAttribute('aria-hidden', 'true');
     document.body.classList.remove('modal-open');
+    const vnAudio = document.getElementById('vnAudio');
+    const bgAudio = document.getElementById('bgAudio');
+    if (vnAudio) {
+      vnAudio.pause();
+    }
+    if (bgAudioWasPlaying && bgAudio) {
+      bgAudio.play().then(() => {
+        const musicToggle = document.getElementById('musicToggle');
+        const musicIcon = document.getElementById('musicIcon');
+        if (musicToggle) musicToggle.classList.add('playing');
+        if (musicIcon) musicIcon.textContent = '🎶';
+      }).catch(() => {});
+    }
   }
 
   if (starModalCloseBtn) starModalCloseBtn.addEventListener('click', closeStarModal);
@@ -195,6 +209,25 @@
 
       card.addEventListener('click', () => openGalleryModal(item));
       galleryGrid.appendChild(card);
+    });
+  }
+
+  /* ---------- Render Birthday Gallery ---------- */
+  const birthdayGrid = document.getElementById('birthdayGrid');
+  if (birthdayGrid) {
+    birthdayItems.forEach(item => {
+      const card = document.createElement('div');
+      card.className = 'g-card reveal';
+      card.innerHTML = `
+        <div class="g-photo">
+          <img src="${item.src}" alt="${item.title}" loading="lazy"
+               onerror="this.style.display='none'; this.parentElement.innerHTML+='<svg class=&quot;ph-icon&quot; width=&quot;44&quot; height=&quot;44&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.5&quot;><rect x=&quot;3&quot; y=&quot;5&quot; width=&quot;18&quot; height=&quot;14&quot; rx=&quot;2&quot;/><circle cx=&quot;8.5&quot; cy=&quot;10&quot; r=&quot;1.5&quot;/><path d=&quot;M21 15l-5-5L5 19&quot;/></svg><span style=&quot;font-size:0.75rem;opacity:0.75;font-weight:500;&quot;>Foto Kenangan</span>'">
+        </div>
+        <div class="g-caption-title">${item.title}</div>
+        <div class="g-caption-date">${item.date}</div>`;
+
+      card.addEventListener('click', () => openGalleryModal(item));
+      birthdayGrid.appendChild(card);
     });
   }
 
@@ -386,6 +419,61 @@
     });
   }
 
+  /* ---------- Voice Note Player Controller ---------- */
+  const vnAudio = document.getElementById('vnAudio');
+  const vnProgressBar = document.getElementById('vnProgressBar');
+  const vnProgressFill = document.getElementById('vnProgressFill');
+  const vnTime = document.getElementById('vnTime');
+
+  if (vnAudio) {
+    const formatTime = (secs) => {
+      if (isNaN(secs)) return "00:00";
+      const m = Math.floor(secs / 60);
+      const s = Math.floor(secs % 60);
+      return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+    };
+
+    vnAudio.addEventListener('loadedmetadata', () => {
+      if (vnTime) vnTime.textContent = formatTime(vnAudio.duration);
+    });
+
+    if (vnAudio.duration && vnTime) {
+      vnTime.textContent = formatTime(vnAudio.duration);
+    }
+
+    vnAudio.addEventListener('timeupdate', () => {
+      const progress = (vnAudio.currentTime / vnAudio.duration) * 100;
+      if (vnProgressFill) vnProgressFill.style.width = `${progress}%`;
+      if (vnTime) vnTime.textContent = formatTime(vnAudio.currentTime);
+    });
+
+    vnAudio.addEventListener('ended', () => {
+      if (vnProgressFill) vnProgressFill.style.width = '0%';
+      if (vnTime && vnAudio.duration) vnTime.textContent = formatTime(vnAudio.duration);
+      if (bgAudioWasPlaying && bgAudio) {
+        bgAudio.play().then(() => {
+          const musicToggle = document.getElementById('musicToggle');
+          const musicIcon = document.getElementById('musicIcon');
+          if (musicToggle) musicToggle.classList.add('playing');
+          if (musicIcon) musicIcon.textContent = '🎶';
+        }).catch(() => {});
+      }
+    });
+
+    if (vnProgressBar) {
+      vnProgressBar.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const rect = vnProgressBar.getBoundingClientRect();
+        const clickX = e.clientX - rect.left;
+        const width = rect.width;
+        const seekTime = (clickX / width) * vnAudio.duration;
+        if (!isNaN(seekTime)) {
+          vnAudio.currentTime = seekTime;
+        }
+      });
+    }
+  }
+
   /* ---------- Wish Button inside Star Modal ---------- */
   if (wishBtn) {
     wishBtn.addEventListener('click', (e) => {
@@ -397,9 +485,17 @@
       setTimeout(() => spawnStardustBurst(x + 100, y - 50), 600);
 
       wishBtn.textContent = 'Harapan Terkirim ke Langit ✨💖';
+
+      // Turn off voice note when sending wish/closing modal
+      if (vnAudio && !vnAudio.paused) {
+        vnAudio.pause();
+      }
+
+      // Automatically close modal after 1 second so they see fireworks burst
       setTimeout(() => {
+        closeStarModal();
         wishBtn.textContent = 'Kirim Harapan ke Langit ✨';
-      }, 3000);
+      }, 1000);
     });
   }
 
@@ -411,18 +507,20 @@
   const musicIcon = document.getElementById('musicIcon');
 
   if (enterBtn && introOverlay) {
-    enterBtn.addEventListener('click', () => {
+    const handleEnter = (e) => {
+      if (e) e.stopPropagation();
       introOverlay.classList.add('hide');
       document.body.classList.remove('locked');
       if (bgAudio) {
         bgAudio.play().then(() => {
           if (musicToggle) musicToggle.classList.add('playing');
           if (musicIcon) musicIcon.textContent = '🎶';
-        }).catch(() => {
-          // Autoplay blocked
+        }).catch((err) => {
+          console.log("Audio play info:", err);
         });
       }
-    });
+    };
+    enterBtn.addEventListener('click', handleEnter);
   }
 
   if (musicToggle && bgAudio) {
