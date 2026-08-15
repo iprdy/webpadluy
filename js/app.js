@@ -417,6 +417,9 @@
   const vnTime = document.getElementById('vnTime');
 
   if (vnAudio) {
+    // Force load the voice note to preload it automatically when entering the site
+    vnAudio.load();
+
     const formatTime = (secs) => {
       if (isNaN(secs)) return "00:00";
       const m = Math.floor(secs / 60);
@@ -492,6 +495,11 @@
   const bgAudio = document.getElementById('bgAudio');
   const musicToggle = document.getElementById('musicToggle');
   const musicIcon = document.getElementById('musicIcon');
+
+  if (bgAudio) {
+    // Force load the background music to preload it automatically when entering the site
+    bgAudio.load();
+  }
 
   if (enterBtn && introOverlay) {
     const handleEnter = (e) => {
