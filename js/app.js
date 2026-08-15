@@ -133,7 +133,7 @@
     if (modalTitle) modalTitle.textContent = item.title;
     if (modalDate) modalDate.textContent = item.date;
     if (modalDesc) modalDesc.textContent = item.description || "Setiap momen bersamamu adalah kenangan manis yang selalu kuingat dan kusimpan dalam hati.";
-    
+
     galleryModal.classList.add('active');
     galleryModal.setAttribute('aria-hidden', 'false');
     document.body.classList.add('modal-open');
@@ -192,7 +192,7 @@
         </div>
         <div class="g-caption-title">${item.title}</div>
         <div class="g-caption-date">${item.date}</div>`;
-      
+
       card.addEventListener('click', () => openGalleryModal(item));
       galleryGrid.appendChild(card);
     });
@@ -340,11 +340,11 @@
       star.style.height = size + 'px';
       star.style.left = Math.random() * 100 + '%';
       star.style.top = Math.random() * 100 + '%';
-      
+
       const chosenColor = starColors[Math.floor(Math.random() * starColors.length)];
       star.style.background = chosenColor;
       star.style.boxShadow = `0 0 ${Math.random() * 6 + 2}px ${chosenColor}`;
-      
+
       const duration = (2 + Math.random() * 4) + 's';
       const delay = (Math.random() * 4) + 's';
       star.style.animation = `starFloat ${duration} ease-in-out ${delay} infinite`;
@@ -368,7 +368,7 @@
       p.textContent = particles[Math.floor(Math.random() * particles.length)];
       p.style.left = x + 'px';
       p.style.top = y + 'px';
-      
+
       const dx = (Math.random() * 180 - 90) + 'px';
       p.style.setProperty('--dx', dx);
       p.style.animationDelay = (Math.random() * 0.25) + 's';
@@ -395,7 +395,7 @@
       spawnStardustBurst(x, y);
       setTimeout(() => spawnStardustBurst(x - 100, y - 50), 300);
       setTimeout(() => spawnStardustBurst(x + 100, y - 50), 600);
-      
+
       wishBtn.textContent = 'Harapan Terkirim ke Langit ✨💖';
       setTimeout(() => {
         wishBtn.textContent = 'Kirim Harapan ke Langit ✨';
