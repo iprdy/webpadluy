@@ -148,11 +148,7 @@
       vnAudio.currentTime = 0;
       if (bgAudio && !bgAudio.paused) {
         bgAudioWasPlaying = true;
-        bgAudio.pause();
-        const musicToggle = document.getElementById('musicToggle');
-        const musicIcon = document.getElementById('musicIcon');
-        if (musicToggle) musicToggle.classList.remove('playing');
-        if (musicIcon) musicIcon.textContent = '🎵';
+        bgAudio.volume = 0.15;
       } else {
         bgAudioWasPlaying = false;
       }
@@ -173,13 +169,8 @@
     if (vnAudio) {
       vnAudio.pause();
     }
-    if (bgAudioWasPlaying && bgAudio) {
-      bgAudio.play().then(() => {
-        const musicToggle = document.getElementById('musicToggle');
-        const musicIcon = document.getElementById('musicIcon');
-        if (musicToggle) musicToggle.classList.add('playing');
-        if (musicIcon) musicIcon.textContent = '🎶';
-      }).catch(() => {});
+    if (bgAudio) {
+      bgAudio.volume = 1.0;
     }
   }
 
@@ -450,13 +441,9 @@
     vnAudio.addEventListener('ended', () => {
       if (vnProgressFill) vnProgressFill.style.width = '0%';
       if (vnTime && vnAudio.duration) vnTime.textContent = formatTime(vnAudio.duration);
-      if (bgAudioWasPlaying && bgAudio) {
-        bgAudio.play().then(() => {
-          const musicToggle = document.getElementById('musicToggle');
-          const musicIcon = document.getElementById('musicIcon');
-          if (musicToggle) musicToggle.classList.add('playing');
-          if (musicIcon) musicIcon.textContent = '🎶';
-        }).catch(() => {});
+      const bgAudio = document.getElementById('bgAudio');
+      if (bgAudio) {
+        bgAudio.volume = 1.0;
       }
     });
 
