@@ -82,14 +82,14 @@
     { icon: "🕊️", text: "You bring calm into my loud world." },
     { icon: "🔥", text: "You're stronger than you think, and I admire that about you." },
     { icon: "🤍", text: "You choose kindness, even when it's hard." },
-    { icon: "🏡", text: "With you, I don't just feel loved — I feel home." },
+    { icon: "🏡", text: "With you, I don't just feel loved, I feel home." },
     { icon: "🌅", text: "You make ordinary days feel like something worth remembering." }
   ];
 
   const bento = [
     { icon: "🎵", tag: "Lo-fi & Pop", title: "Your Music", text: "You love keshi, and your favorite band is The Overtune. We've always said, 'One day we'll watch keshi together.' Someday, I want to stand next to you, singing your favorite songs under the same lights.", wide: false },
     { icon: "🥟", tag: "Dimsum Lover", title: "Your Favorite Food", text: "You absolutely love eating dimsum. No matter how long or tiring your day has been, this simple, warm comfort food never fails to immediately brighten up your mood, bring you absolute joy, and put the sweetest smile back on your face.", wide: false },
-    { icon: "💧", tag: "Just Water", title: "Your Comfort", text: "Every single time we go out on our dates, you almost always order a simple glass of water. It is a small but beautiful detail that says so much about your humble soul — you truly do not need anything extra or fancy in this life to feel completely content.", wide: false },
+    { icon: "💧", tag: "Just Water", title: "Your Comfort", text: "Every single time we go out on our dates, you almost always order a simple glass of water. It is a small but beautiful detail that says so much about your humble soul, you truly do not need anything extra or fancy in this life to feel completely content.", wide: false },
     { icon: "🍗", tag: "Ayam Madura", title: "Your Peace", text: "For you, true peace and relaxation is as simple as sitting down and enjoying a plate of your favorite Ayam Madura. Savoring every single delicious bite of this comfort dish is always more than enough to completely clear your mind and bring you comfort after a long, tiring day.", wide: false },
     { icon: "💖", tag: "The Way You Fix Your Hijab", title: "Your Beauty", text: "The way you adjust your hijab when you're thinking, the small movement when you're nervous, the smile you try to hide but can't fully. I notice those little things, and every one makes you even more beautiful to me.", wide: true },
     { icon: "🧕", tag: "Helping Others", title: "Your Soft Spot", text: "Your incredibly soft and gentle side always shines the absolute brightest whenever you genuinely reach out to help those in need around you. The pure kindness and empathy you show to others is a rare, true beauty that I will forever admire and cherish about you.", wide: true }
