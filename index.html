@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gladys Ayu Adelia | Our Story</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/app.js" defer></script>
+</head>
+<body class="locked">
+  <noscript>
+    <div style="padding:16px;text-align:center;background:#F43F5E;color:#fff;font-family:Arial,sans-serif;">
+      Aktifkan JavaScript untuk melihat seluruh animasi dan interaksi halaman ini.
+    </div>
+  </noscript>
+
+  <!-- ================= PROGRESS BAR ================= -->
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- ================= INTRO OVERLAY ================= -->
+  <div class="intro-overlay" id="introOverlay">
+    <div class="cloud-layer" aria-hidden="true">
+      <svg class="cloud cloud--a" style="top:8%; left:-14%; width:260px;" viewBox="0 0 200 100"><path d="M40 70C22 70 10 58 10 44C10 30 22 20 36 20C40 8 54 0 68 0C84 0 98 10 102 24C118 22 132 34 132 48C132 50 132 52 131 54C144 56 154 66 154 78C154 90 144 100 130 100H36C18 100 4 88 4 74C4 72 10 70 40 70Z" fill="#FFFFFF"/></svg>
+      <svg class="cloud cloud--b" style="bottom:10%; right:-12%; width:300px;" viewBox="0 0 200 100"><path d="M40 70C22 70 10 58 10 44C10 30 22 20 36 20C40 8 54 0 68 0C84 0 98 10 102 24C118 22 132 34 132 48C132 50 132 52 131 54C144 56 154 66 154 78C154 90 144 100 130 100H36C18 100 4 88 4 74C4 72 10 70 40 70Z" fill="#FFFFFF"/></svg>
+    </div>
+    <div class="intro-card">
+      <span class="intro-badge">☁ A little something for you</span>
+      <div class="intro-icon">💖</div>
+      <h2 class="intro-title">Hi, Gladys.</h2>
+      <p class="intro-text">Before you scroll any further — this whole page was made just for you. Every moment, every little detail, gathered under one sky. Ready to open it?</p>
+      <button class="btn-primary intro-btn" id="enterBtn" type="button">Buka Kisah Kita ☁️</button>
+    </div>
+  </div>
+
+  <!-- ================= MUSIC ================= -->
+  <audio id="bgAudio" loop preload="none">
+    <source src="audio/our-song.mp3" type="audio/mpeg">
+  </audio>
+  <button class="music-toggle" id="musicToggle" aria-label="Play or pause background music" type="button">
+    <span id="musicIcon">🎵</span>
+  </button>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="cloud-layer" aria-hidden="true">
+      <svg class="cloud cloud--a" style="top:9%; left:-12%; width:300px;" viewBox="0 0 200 100"><path d="M40 70C22 70 10 58 10 44C10 30 22 20 36 20C40 8 54 0 68 0C84 0 98 10 102 24C118 22 132 34 132 48C132 50 132 52 131 54C144 56 154 66 154 78C154 90 144 100 130 100H36C18 100 4 88 4 74C4 72 10 70 40 70Z" fill="#FFFFFF"/></svg>
+      <svg class="cloud cloud--b" style="top:18%; right:-10%; width:270px;" viewBox="0 0 200 100"><path d="M40 70C22 70 10 58 10 44C10 30 22 20 36 20C40 8 54 0 68 0C84 0 98 10 102 24C118 22 132 34 132 48C132 50 132 52 131 54C144 56 154 66 154 78C154 90 144 100 130 100H36C18 100 4 88 4 74C4 72 10 70 40 70Z" fill="#FFFFFF"/></svg>
+      <svg class="cloud cloud--c" style="top:42%; left:62%; width:170px; opacity:0.85;" viewBox="0 0 200 100"><path d="M40 70C22 70 10 58 10 44C10 30 22 20 36 20C40 8 54 0 68 0C84 0 98 10 102 24C118 22 132 34 132 48C132 50 132 52 131 54C144 56 154 66 154 78C154 90 144 100 130 100H36C18 100 4 88 4 74C4 72 10 70 40 70Z" fill="#FFFFFF"/></svg>
+      <svg class="cloud cloud--b" style="bottom:6%; left:10%; width:340px;" viewBox="0 0 200 100"><path d="M40 70C22 70 10 58 10 44C10 30 22 20 36 20C40 8 54 0 68 0C84 0 98 10 102 24C118 22 132 34 132 48C132 50 132 52 131 54C144 56 154 66 154 78C154 90 144 100 130 100H36C18 100 4 88 4 74C4 72 10 70 40 70Z" fill="#FFFFFF"/></svg>
+      <svg class="cloud cloud--a" style="bottom:18%; right:4%; width:210px; opacity:0.85;" viewBox="0 0 200 100"><path d="M40 70C22 70 10 58 10 44C10 30 22 20 36 20C40 8 54 0 68 0C84 0 98 10 102 24C118 22 132 34 132 48C132 50 132 52 131 54C144 56 154 66 154 78C154 90 144 100 130 100H36C18 100 4 88 4 74C4 72 10 70 40 70Z" fill="#FFFFFF"/></svg>
+    </div>
+    <div class="hero-content">
+      <span class="eyebrow">☁ Our little corner of the sky</span>
+      <h1>Gladys Ayu Adelia</h1>
+      <p>The most beautiful woman I've ever seen.</p>
+      <button class="btn-primary" id="startBtn" type="button">Start Our Journey 💖</button>
+    </div>
+    <div class="scroll-hint">
+      <span>Scroll to see our story</span>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+    </div>
+  </section>
+
+  <!-- ================= TIMELINE ================= -->
+  <section class="timeline" id="timeline">
+    <div class="cloud-layer cloud-layer--soft" aria-hidden="true">
+      <svg class="cloud cloud--a" style="top:4%; right:-8%; width:220px;" viewBox="0 0 200 100"><path d="M40 70C22 70 10 58 10 44C10 30 22 20 36 20C40 8 54 0 68 0C84 0 98 10 102 24C118 22 132 34 132 48C132 50 132 52 131 54C144 56 154 66 154 78C154 90 144 100 130 100H36C18 100 4 88 4 74C4 72 10 70 40 70Z" fill="#FFFFFF"/></svg>
+      <svg class="cloud cloud--b" style="bottom:2%; left:-10%; width:260px;" viewBox="0 0 200 100"><path d="M40 70C22 70 10 58 10 44C10 30 22 20 36 20C40 8 54 0 68 0C84 0 98 10 102 24C118 22 132 34 132 48C132 50 132 52 131 54C144 56 154 66 154 78C154 90 144 100 130 100H36C18 100 4 88 4 74C4 72 10 70 40 70Z" fill="#FFFFFF"/></svg>
+    </div>
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <span class="label">Our Timeline</span>
+        <h2>Moments that changed everything</h2>
+      </div>
+      <div class="timeline-track">
+        <div class="timeline-line" aria-hidden="true"></div>
+        <div class="timeline-line-fill" id="timelineLineFill" aria-hidden="true"></div>
+        <div class="t-travel-cloud" aria-hidden="true">☁️</div>
+
+        <div class="t-item reveal">
+          <div class="t-card">
+            <span class="t-date">March 24, 2024</span>
+            <h3 class="t-title">💬 First Chat</h3>
+            <p class="t-desc">I sent you a message because your birthday was coming up. I didn't know it at the time, but that simple message would change my life forever. From that day on, you slowly became my favorite person.</p>
+          </div>
+          <div class="t-dot"></div>
+          <div class="t-spacer"></div>
+        </div>
+
+        <div class="t-item reveal">
+          <div class="t-spacer"></div>
+          <div class="t-dot"></div>
+          <div class="t-card">
+            <span class="t-date">April 13, 2024</span>
+            <h3 class="t-title">☕ First Date</h3>
+            <p class="t-desc">Our first date felt like stepping into a new world together. From the haunted house to the museum, from Korean Town to that cozy little coffee shop — we talked, we laughed, and somewhere between those moments, my heart started choosing you.</p>
+          </div>
+        </div>
+
+        <div class="t-item reveal">
+          <div class="t-card">
+            <span class="t-date">April 21, 2024</span>
+            <h3 class="t-title">💖 Second Date</h3>
+            <p class="t-desc">We planned to watch a movie, but the day had its own little plot twist. It suddenly rained on our way to the cinema, and instead of running from it, we laughed and let the rain soak us a little. You looked even more beautiful under that grey sky. It wasn't just a second date — it was the day I realized I didn't just like you, I felt at home with you.</p>
+          </div>
+          <div class="t-dot"></div>
+          <div class="t-spacer"></div>
+        </div>
+
+        <div class="t-item reveal">
+          <div class="t-spacer"></div>
+          <div class="t-dot"></div>
+          <div class="t-card">
+            <span class="t-date">August 4, 2024</span>
+            <h3 class="t-title">🎶 Our First Concert Date</h3>
+            <p class="t-desc">That night at the concert, surrounded by music and lights, we sang along to Tulus, Vierra, and Sal Priadi. But the most unforgettable part wasn't the songs — it was the first time we posted each other on our stories. It was our quiet way of saying, "Yes, this is us."</p>
+          </div>
+        </div>
+
+        <div class="t-item reveal">
+          <div class="t-card">
+            <span class="t-date">December 31, 2024</span>
+            <h3 class="t-title">🎆 Our First New Year</h3>
+            <p class="t-desc">We celebrated our very first New Year together. As the countdown echoed in the night sky, it wasn't just fireworks lighting up the world — it was us, stepping into a new year side by side. That night, we surprised your dad together, and seeing his smile made everything feel even more special.</p>
+          </div>
+          <div class="t-dot"></div>
+          <div class="t-spacer"></div>
+        </div>
+
+        <div class="t-item reveal">
+          <div class="t-spacer"></div>
+          <div class="t-dot"></div>
+          <div class="t-card">
+            <span class="t-date">March 31, 2025</span>
+            <h3 class="t-title">💖 You Met My Family</h3>
+            <p class="t-desc">During Ramadan 2025, you met my family for the first time. Watching you with them made my heart so full. It felt like two worlds I love deeply were finally becoming one.</p>
+          </div>
+        </div>
+
+        <div class="t-item reveal">
+          <div class="t-card">
+            <span class="t-date">August 27, 2025</span>
+            <h3 class="t-title">🚆 Bekasi – Bandung</h3>
+            <p class="t-desc">Bekasi and Bandung — not oceans apart, but far enough to make every goodbye a little heavier. The late night calls, the "have you eaten?" messages, the countdowns until the next train ride — they became our new way of loving. Distance didn't take you away from me. It just taught me how strong we can be, even when we're not in the same place.</p>
+          </div>
+          <div class="t-dot"></div>
+          <div class="t-spacer"></div>
+        </div>
+
+        <div class="t-item reveal">
+          <div class="t-spacer"></div>
+          <div class="t-dot"></div>
+          <div class="t-card">
+            <span class="t-date">Now</span>
+            <h3 class="t-title">💍 Until Forever</h3>
+            <p class="t-desc">Every day with you feels like a blessing I never want to take for granted. Through laughter, silence, chaos, and calm — I choose you. Today, tomorrow, and for as long as life allows me to.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= GALLERY ================= -->
+  <section class="gallery" id="gallery">
+    <div class="cloud-layer cloud-layer--soft" aria-hidden="true">
+      <svg class="cloud cloud--a" style="top:2%; left:-10%; width:240px;" viewBox="0 0 200 100"><path d="M40 70C22 70 10 58 10 44C10 30 22 20 36 20C40 8 54 0 68 0C84 0 98 10 102 24C118 22 132 34 132 48C132 50 132 52 131 54C144 56 154 66 154 78C154 90 144 100 130 100H36C18 100 4 88 4 74C4 72 10 70 40 70Z" fill="#FFFFFF"/></svg>
+      <svg class="cloud cloud--c" style="bottom:4%; right:-8%; width:230px;" viewBox="0 0 200 100"><path d="M40 70C22 70 10 58 10 44C10 30 22 20 36 20C40 8 54 0 68 0C84 0 98 10 102 24C118 22 132 34 132 48C132 50 132 52 131 54C144 56 154 66 154 78C154 90 144 100 130 100H36C18 100 4 88 4 74C4 72 10 70 40 70Z" fill="#FFFFFF"/></svg>
+    </div>
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <span class="label">Our Memories</span>
+        <h2>Frames from the sky</h2>
+        <p>Click on any photo to relive the moment ✨</p>
+      </div>
+      <div class="gallery-grid" id="galleryGrid"></div>
+    </div>
+  </section>
+
+  <!-- ================= LIGHTBOX POP-OUT MODAL ================= -->
+  <div class="gallery-modal" id="galleryModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-card">
+      <button class="modal-close" id="modalCloseBtn" aria-label="Tutup modal">&times;</button>
+      <div class="modal-image-wrap">
+        <img id="modalImg" src="" alt="">
+      </div>
+      <div class="modal-body">
+        <h3 class="modal-title" id="modalTitle"></h3>
+        <span class="modal-date" id="modalDate"></span>
+        <p class="modal-desc" id="modalDesc"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= REASONS ================= -->
+  <section class="reasons" id="reasons">
+    <div class="cloud-layer cloud-layer--soft" aria-hidden="true">
+      <svg class="cloud cloud--b" style="top:6%; right:-10%; width:250px;" viewBox="0 0 200 100"><path d="M40 70C22 70 10 58 10 44C10 30 22 20 36 20C40 8 54 0 68 0C84 0 98 10 102 24C118 22 132 34 132 48C132 50 132 52 131 54C144 56 154 66 154 78C154 90 144 100 130 100H36C18 100 4 88 4 74C4 72 10 70 40 70Z" fill="#FFFFFF"/></svg>
+      <svg class="cloud cloud--a" style="bottom:2%; left:-8%; width:220px;" viewBox="0 0 200 100"><path d="M40 70C22 70 10 58 10 44C10 30 22 20 36 20C40 8 54 0 68 0C84 0 98 10 102 24C118 22 132 34 132 48C132 50 132 52 131 54C144 56 154 66 154 78C154 90 144 100 130 100H36C18 100 4 88 4 74C4 72 10 70 40 70Z" fill="#FFFFFF"/></svg>
+    </div>
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <span class="label">Reasons I Love You</span>
+        <h2>Click each cloud to reveal why</h2>
+      </div>
+      <div class="reasons-grid" id="reasonsGrid"></div>
+    </div>
+  </section>
+
+  <!-- ================= LITTLE THINGS ================= -->
+  <section class="little" id="little">
+    <div class="little-particles"></div>
+    <div class="cloud-layer cloud-layer--soft" aria-hidden="true">
+      <svg class="cloud cloud--c" style="top:4%; left:-8%; width:230px;" viewBox="0 0 200 100"><path d="M40 70C22 70 10 58 10 44C10 30 22 20 36 20C40 8 54 0 68 0C84 0 98 10 102 24C118 22 132 34 132 48C132 50 132 52 131 54C144 56 154 66 154 78C154 90 144 100 130 100H36C18 100 4 88 4 74C4 72 10 70 40 70Z" fill="#FFFFFF"/></svg>
+      <svg class="cloud cloud--b" style="bottom:6%; right:-10%; width:260px;" viewBox="0 0 200 100"><path d="M40 70C22 70 10 58 10 44C10 30 22 20 36 20C40 8 54 0 68 0C84 0 98 10 102 24C118 22 132 34 132 48C132 50 132 52 131 54C144 56 154 66 154 78C154 90 144 100 130 100H36C18 100 4 88 4 74C4 72 10 70 40 70Z" fill="#FFFFFF"/></svg>
+    </div>
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <span class="label">Gladys, in the little things</span>
+        <h2>I pay attention to the details that make you, you</h2>
+      </div>
+      <div class="bento" id="bentoGrid"></div>
+    </div>
+  </section>
+
+  <!-- ================= COUNTDOWN ================= -->
+  <section class="countdown" id="countdown">
+    <div class="cloud-layer cloud-layer--soft" aria-hidden="true">
+      <svg class="cloud cloud--a" style="top:2%; right:-8%; width:230px;" viewBox="0 0 200 100"><path d="M40 70C22 70 10 58 10 44C10 30 22 20 36 20C40 8 54 0 68 0C84 0 98 10 102 24C118 22 132 34 132 48C132 50 132 52 131 54C144 56 154 66 154 78C154 90 144 100 130 100H36C18 100 4 88 4 74C4 72 10 70 40 70Z" fill="#FFFFFF"/></svg>
+    </div>
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <span class="label">Birthday Countdown</span>
+        <h2>Days until we celebrate YOU</h2>
+      </div>
+      <div class="cd-card reveal">
+        <div class="cd-grid" id="cdGrid"></div>
+        <p style="margin-top:20px; color:var(--ink-light); font-style:italic;">Get ready for the best day of the year! 🎉</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FINALE ================= -->
+  <section class="finale" id="finale">
+    <div class="stars" id="starsLayer" aria-hidden="true"></div>
+    <div class="finale-content">
+      <div class="finale-heart" id="finaleHeart">💖</div>
+      <h2>I choose you.</h2>
+      <p>Every single day, Gladys.</p>
+      <p class="sub">Through every moment, every season, every lifetime.</p>
+      <button class="btn-light" id="surpriseBtn" type="button">🎆 One Last Surprise 🎆</button>
+    </div>
+  </section>
+
+  <!-- ================= STARLIGHT LOVE NOTE POP-OUT MODAL ================= -->
+  <div class="star-modal" id="starModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="star-modal-backdrop" id="starModalBackdrop"></div>
+    <div class="star-modal-card">
+      <button class="star-modal-close" id="starModalCloseBtn" aria-label="Tutup modal">&times;</button>
+      <div class="star-modal-header">
+        <div class="star-modal-icon">✨</div>
+        <span class="star-modal-badge">✨ A Secret Wish Under The Stars ✨</span>
+      </div>
+      <h3 class="star-modal-title">Written in the Stars for Gladys</h3>
+      <p class="star-modal-body">
+        Dari jutaan bintang yang bertaburan di langit malam, sinarmulah yang selalu menuntunku pulang. 
+        Tak peduli berapa banyak waktu berlalu, seberapa jauh jarak membentang, atau seberapa cepat dunia berubah — di bawah langit yang sama ini, hatiku akan selalu memilihmu, Gladys.<br><br>
+        Selalu dan selamanya. 💖
+      </p>
+      <button class="wish-btn" id="wishBtn" type="button">Kirim Harapan ke Langit ✨</button>
+    </div>
+  </div>
+
+  <footer>Made with 💖 under our sky.</footer>
+</body>
+</html>
