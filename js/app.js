@@ -60,6 +60,12 @@
       date: "August 2025",
       src: "images/hbd2.jpeg",
       description: "Di tahun kedua kita merayakan ulang tahunmu bersama, aku melihat sosok wanita yang semakin dewasa dan bijaksana. Kamu bukan hanya seseorang yang selalu ada di sisiku, tetapi juga seseorang yang mampu membimbingku agar hidupku menjadi lebih terarah. Dari caramu berpikir, menghadapi berbagai hal, dan selalu berusaha memberikan yang terbaik, aku semakin melihat sosok wanita yang sangat aku kagumi."
+    },
+    {
+      title: "Soon August 2026 💖",
+      date: "August 2026",
+      src: "images/cloud_question.svg",
+      description: "Aku sangat menantikan momen bahagia ini datang lagi di tahun 2026. Di mana kita bisa merayakan hari spesialmu bersama dengan penuh tawa, kebahagiaan, dan tentu saja, lebih banyak kenangan manis yang akan kita ukir berdua. Sampai hari itu tiba, aku akan selalu tidak sabar untuk menyambutnya bersamamu! 💖"
     }
   ];
 
