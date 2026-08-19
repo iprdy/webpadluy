@@ -11,16 +11,22 @@
 
   const galleryItems = [
     {
-      title: "First Romantic Photo",
-      date: "September 2025",
-      src: "images/1.jpeg",
-      description: "Saat itu, kamu sempat dipaksa oleh temanmu untuk foto berdua denganku. Aku masih ingat betapa kagetnya aku ketika kamu langsung bersedia dan bahkan menyentuh bahuku saat berfoto. Mungkin bagi kamu itu hanya sebuah foto sederhana, tapi entah kenapa, momen kecil itu terus melekat di ingatanku."
+      title: "Thrills & Smiles at Dufan",
+      date: "May 8, 2024",
+      src: "images/8.jpeg",
+      description: "Hari saat kita main dan jalan-jalan ke Dufan menjadi salah satu petualangan bersamamu yang paling berkesan. Di tengah serunya berbagai wahana, antrean panjang, dan rasa lelah, tawa dan senyuman bahagiamu adalah hadiah terbaik. Bersamamu, momen sesederhana apa pun berubah menjadi kenangan yang paling indah dan tak terlupakan."
     },
     {
       title: "Making Time for Us",
       date: "May 2025",
       src: "images/2.jpeg",
       description: "Ketika kita mulai sibuk dengan urusan dan pekerjaan masing-masing, waktu bersama menjadi semakin sulit untuk ditemukan. Namun, di tengah padatnya hari dan banyaknya hal yang harus diselesaikan, kita tetap berusaha meluangkan waktu untuk satu sama lain. Mungkin waktunya tidak selalu lama, tetapi setiap kesempatan untuk bersama selalu terasa berharga."
+    },
+    {
+      title: "First Romantic Photo",
+      date: "September 2025",
+      src: "images/1.jpeg",
+      description: "Saat itu, kamu sempat dipaksa oleh temanmu untuk foto berdua denganku. Aku masih ingat betapa kagetnya aku ketika kamu langsung bersedia dan bahkan menyentuh bahuku saat berfoto. Mungkin bagi kamu itu hanya sebuah foto sederhana, tapi entah kenapa, momen kecil itu terus melekat di ingatanku."
     },
     {
       title: "So Proud of You",
@@ -45,6 +51,12 @@
       date: "August 2026",
       src: "images/6.jpeg",
       description: "Hari itu aku memberikan bunga pertamaku kepadamu. Mungkin terlihat sederhana, tapi sebenarnya ada banyak perasaan yang ingin kusampaikan lewat bunga itu. Aku hanya ingin melihat senyummu dan membuatmu merasa sedikit lebih spesial. Dan sampai sekarang, momen ketika pertama kali memberimu bunga tetap menjadi salah satu kenangan yang paling manis untukku."
+    },
+    {
+      title: "Lost in the City (Bogor)",
+      date: "August 20, 2026",
+      src: "images/7.jpeg",
+      description: "Hari itu di Bogor, kenangan yang paling berbekas adalah betapa perhatiannya kamu. Saat aku sedang tidak enak badan dan sakit pada kala itu, kamu dengan penuh kasih sayang menyiapkan makanan hangat dan obat untukku. Perhatian dan kebaikan kecilmu hari itu membuatku tersadar betapa beruntungnya aku memiliki seseorang sepertimu yang selalu tulus peduli dan merawatku."
     }
   ];
 
@@ -93,7 +105,7 @@
   ];
 
   const bento = [
-    { icon: "🎵", tag: "Lo-fi & Pop", title: "Your Music", text: "You love keshi, and your favorite band is The Overtune. We've always said, 'One day we'll watch keshi together.' Someday, I want to stand next to you, singing your favorite songs under the same lights.", wide: false },
+    { icon: "🎵", tag: "Nadin - Kekal", title: "Your Favorite Song", text: "Lagu favoritmu adalah 'Kekal' dari Nadin Amizah, di samping kecintaanmu pada Keshi dan The Overtune. Setiap kali lagu indah ini berputar, rasanya suasana menjadi begitu hangat dan selalu mengingatkanku pada indahnya setiap momen bersamamu.", wide: false },
     { icon: "🥟", tag: "Dimsum Lover", title: "Your Favorite Food", text: "You absolutely love eating dimsum. No matter how long or tiring your day has been, this simple, warm comfort food never fails to immediately brighten up your mood, bring you absolute joy, and put the sweetest smile back on your face.", wide: false },
     { icon: "💧", tag: "Just Water", title: "Your Comfort", text: "Every single time we go out on our dates, you almost always order a simple glass of water. It is a small but beautiful detail that says so much about your humble soul, you truly do not need anything extra or fancy in this life to feel completely content.", wide: false },
     { icon: "🍗", tag: "Ayam Madura", title: "Your Peace", text: "For you, true peace and relaxation is as simple as sitting down and enjoying a plate of your favorite Ayam Madura. Savoring every single delicious bite of this comfort dish is always more than enough to completely clear your mind and bring you comfort after a long, tiring day.", wide: false },
@@ -135,6 +147,84 @@
   if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeGalleryModal);
   if (modalBackdrop) modalBackdrop.addEventListener('click', closeGalleryModal);
 
+  /* ---------- Video Surprise Modal & Easter Egg ---------- */
+  const videoModal = document.getElementById('videoModal');
+  const videoModalCloseBtn = document.getElementById('videoModalCloseBtn');
+  const videoModalBackdrop = document.getElementById('videoModalBackdrop');
+  const surpriseVideo = document.getElementById('surpriseVideo');
+  const easterEggBtn = document.getElementById('easterEggBtn');
+
+  function lockEasterEgg() {
+    if (!easterEggBtn) return;
+    easterEggBtn.classList.add('locked');
+    easterEggBtn.innerHTML = `
+      <div class="easter-egg-pulse" style="display:none;"></div>
+      <span class="easter-egg-icon">🔒✨</span>
+      <div class="easter-egg-text">
+        <strong>Tonton Video Sampai Selesai 🔒</strong>
+        <span>Selesaikan videonya untuk membuka Last Surprise (Voice Note) 💖</span>
+      </div>`;
+  }
+
+  function unlockEasterEgg() {
+    if (!easterEggBtn) return;
+    easterEggBtn.classList.remove('locked');
+    easterEggBtn.innerHTML = `
+      <div class="easter-egg-pulse"></div>
+      <span class="easter-egg-icon">🐣✨</span>
+      <div class="easter-egg-text">
+        <strong>Pstt... Easter Egg Terbuka! 🎁</strong>
+        <span>Sentuh di sini untuk membuka Last Surprise (Voice Note) 💖</span>
+      </div>`;
+  }
+
+  function openVideoModal() {
+    if (!videoModal) return;
+    videoModal.classList.add('active');
+    videoModal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+
+    // Lock easter egg when modal opens
+    lockEasterEgg();
+
+    const bgAudio = document.getElementById('bgAudio');
+    if (bgAudio && !bgAudio.paused) {
+      bgAudioWasPlaying = true;
+      bgAudio.pause();
+    }
+
+    if (surpriseVideo) {
+      surpriseVideo.currentTime = 0;
+      surpriseVideo.play().catch(err => console.log("Video autoplay info:", err));
+    }
+  }
+
+  function closeVideoModal() {
+    if (!videoModal) return;
+    videoModal.classList.remove('active');
+    videoModal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('modal-open');
+
+    if (surpriseVideo) {
+      surpriseVideo.pause();
+    }
+
+    const bgAudio = document.getElementById('bgAudio');
+    if (bgAudio && bgAudioWasPlaying) {
+      bgAudio.play().catch(err => console.log("BG audio resume info:", err));
+    }
+  }
+
+  if (surpriseVideo) {
+    surpriseVideo.addEventListener('ended', () => {
+      unlockEasterEgg();
+      spawnStardustBurst(window.innerWidth / 2, window.innerHeight / 2);
+    });
+  }
+
+  if (videoModalCloseBtn) videoModalCloseBtn.addEventListener('click', closeVideoModal);
+  if (videoModalBackdrop) videoModalBackdrop.addEventListener('click', closeVideoModal);
+
   /* ---------- Star Pop-Out Modal ---------- */
   const starModal = document.getElementById('starModal');
   const starModalCloseBtn = document.getElementById('starModalCloseBtn');
@@ -174,6 +264,7 @@
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') {
       closeGalleryModal();
+      closeVideoModal();
       closeStarModal();
     }
   });
@@ -443,7 +534,7 @@
       const bgAudio = document.getElementById('bgAudio');
       if (bgAudio && !bgAudio.paused) {
         bgAudioWasPlaying = true;
-        bgAudio.volume = 0.03;
+        bgAudio.volume = 0.10;
       } else {
         bgAudioWasPlaying = false;
       }
@@ -584,7 +675,7 @@
   updateProgress();
   updateTimelineProgress();
 
-  /* ---------- Buttons ---------- */
+  /* ---------- Buttons & Surprise Triggers ---------- */
   const startBtn = document.getElementById('startBtn');
   if (startBtn) {
     startBtn.addEventListener('click', () => {
@@ -598,13 +689,13 @@
   const surpriseBtn = document.getElementById('surpriseBtn');
   const finaleHeart = document.getElementById('finaleHeart');
 
-  // Pop-out Modal opens ONLY when clicking the explicit button or big heart
+  // Clicking "One Last Surprise" opens the Video Modal FIRST!
   if (surpriseBtn) {
     surpriseBtn.addEventListener('click', (e) => {
       e.stopPropagation();
       const rect = surpriseBtn.getBoundingClientRect();
       spawnStardustBurst(rect.left + rect.width / 2, rect.top);
-      openStarModal();
+      openVideoModal();
     });
   }
 
@@ -612,7 +703,27 @@
     finaleHeart.addEventListener('click', (e) => {
       e.stopPropagation();
       spawnStardustBurst(e.clientX, e.clientY);
-      openStarModal();
+      openVideoModal();
+    });
+  }
+
+  // Clicking Easter Egg inside Video Modal transitions to the Voice Note Modal ONLY when unlocked!
+  if (easterEggBtn) {
+    easterEggBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const rect = easterEggBtn.getBoundingClientRect();
+
+      if (easterEggBtn.classList.contains('locked')) {
+        // Locked state feedback
+        spawnStardustBurst(rect.left + rect.width / 2, rect.top);
+        return;
+      }
+
+      spawnStardustBurst(rect.left + rect.width / 2, rect.top);
+      closeVideoModal();
+      setTimeout(() => {
+        openStarModal();
+      }, 350);
     });
   }
 
