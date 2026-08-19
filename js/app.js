@@ -24,7 +24,7 @@
     },
     {
       title: "Lost in the City",
-      date: "March 2025",
+      date: "March 2024",
       src: "images/7.jpeg",
       description: "Hari itu di Bogor, kenangan yang paling berbekas adalah betapa perhatiannya kamu. Saat aku sedang tidak enak badan dan sakit pada kala itu, kamu dengan penuh kasih sayang menyiapkan makanan hangat dan obat untukku. Perhatian dan kebaikan kecilmu hari itu membuatku tersadar betapa beruntungnya aku memiliki seseorang sepertimu yang selalu tulus peduli dan merawatku."
     },
