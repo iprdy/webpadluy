@@ -18,9 +18,15 @@
     },
     {
       title: "Thrills & Smiles at Dufan",
-      date: "May 8, 2024",
+      date: "May 2024",
       src: "images/8.jpeg",
       description: "Hari saat kita main dan jalan-jalan ke Dufan menjadi salah satu petualangan bersamamu yang paling berkesan. Di tengah serunya berbagai wahana, antrean panjang, dan rasa lelah, tawa dan senyuman bahagiamu adalah hadiah terbaik. Bersamamu, momen sesederhana apa pun berubah menjadi kenangan yang paling indah dan tak terlupakan."
+    },
+    {
+      title: "Lost in the City",
+      date: "March 2025",
+      src: "images/7.jpeg",
+      description: "Hari itu di Bogor, kenangan yang paling berbekas adalah betapa perhatiannya kamu. Saat aku sedang tidak enak badan dan sakit pada kala itu, kamu dengan penuh kasih sayang menyiapkan makanan hangat dan obat untukku. Perhatian dan kebaikan kecilmu hari itu membuatku tersadar betapa beruntungnya aku memiliki seseorang sepertimu yang selalu tulus peduli dan merawatku."
     },
     {
       title: "Making Time for Us",
@@ -51,12 +57,6 @@
       date: "August 2026",
       src: "images/6.jpeg",
       description: "Hari itu aku memberikan bunga pertamaku kepadamu. Mungkin terlihat sederhana, tapi sebenarnya ada banyak perasaan yang ingin kusampaikan lewat bunga itu. Aku hanya ingin melihat senyummu dan membuatmu merasa sedikit lebih spesial. Dan sampai sekarang, momen ketika pertama kali memberimu bunga tetap menjadi salah satu kenangan yang paling manis untukku."
-    },
-    {
-      title: "Lost in the City (Bogor)",
-      date: "August 20, 2026",
-      src: "images/7.jpeg",
-      description: "Hari itu di Bogor, kenangan yang paling berbekas adalah betapa perhatiannya kamu. Saat aku sedang tidak enak badan dan sakit pada kala itu, kamu dengan penuh kasih sayang menyiapkan makanan hangat dan obat untukku. Perhatian dan kebaikan kecilmu hari itu membuatku tersadar betapa beruntungnya aku memiliki seseorang sepertimu yang selalu tulus peduli dan merawatku."
     }
   ];
 
