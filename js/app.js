@@ -11,6 +11,12 @@
 
   const galleryItems = [
     {
+      title: "First Romantic Photo",
+      date: "September 2023",
+      src: "images/1.jpeg",
+      description: "Saat itu, kamu sempat dipaksa oleh temanmu untuk foto berdua denganku. Aku masih ingat betapa kagetnya aku ketika kamu langsung bersedia dan bahkan menyentuh bahuku saat berfoto. Mungkin bagi kamu itu hanya sebuah foto sederhana, tapi entah kenapa, momen kecil itu terus melekat di ingatanku."
+    },
+    {
       title: "Thrills & Smiles at Dufan",
       date: "May 8, 2024",
       src: "images/8.jpeg",
@@ -21,12 +27,6 @@
       date: "May 2025",
       src: "images/2.jpeg",
       description: "Ketika kita mulai sibuk dengan urusan dan pekerjaan masing-masing, waktu bersama menjadi semakin sulit untuk ditemukan. Namun, di tengah padatnya hari dan banyaknya hal yang harus diselesaikan, kita tetap berusaha meluangkan waktu untuk satu sama lain. Mungkin waktunya tidak selalu lama, tetapi setiap kesempatan untuk bersama selalu terasa berharga."
-    },
-    {
-      title: "First Romantic Photo",
-      date: "September 2025",
-      src: "images/1.jpeg",
-      description: "Saat itu, kamu sempat dipaksa oleh temanmu untuk foto berdua denganku. Aku masih ingat betapa kagetnya aku ketika kamu langsung bersedia dan bahkan menyentuh bahuku saat berfoto. Mungkin bagi kamu itu hanya sebuah foto sederhana, tapi entah kenapa, momen kecil itu terus melekat di ingatanku."
     },
     {
       title: "So Proud of You",
@@ -105,7 +105,7 @@
   ];
 
   const bento = [
-    { icon: "🎵", tag: "Nadin - Kekal", title: "Your Favorite Song", text: "Lagu favoritmu adalah 'Kekal' dari Nadin Amizah, di samping kecintaanmu pada Keshi dan The Overtune. Setiap kali lagu indah ini berputar, rasanya suasana menjadi begitu hangat dan selalu mengingatkanku pada indahnya setiap momen bersamamu.", wide: false },
+    { icon: "🎵", tag: "Nadin - Kekal", title: "Your Favorite Song", text: "Your absolute favorite song is 'Kekal' by Nadin Amizah, alongside your love for keshi and The Overtune. Every time this beautiful song plays, it brings so much warmth and immediately reminds me of all the sweet moments shared with you.", wide: false },
     { icon: "🥟", tag: "Dimsum Lover", title: "Your Favorite Food", text: "You absolutely love eating dimsum. No matter how long or tiring your day has been, this simple, warm comfort food never fails to immediately brighten up your mood, bring you absolute joy, and put the sweetest smile back on your face.", wide: false },
     { icon: "💧", tag: "Just Water", title: "Your Comfort", text: "Every single time we go out on our dates, you almost always order a simple glass of water. It is a small but beautiful detail that says so much about your humble soul, you truly do not need anything extra or fancy in this life to feel completely content.", wide: false },
     { icon: "🍗", tag: "Ayam Madura", title: "Your Peace", text: "For you, true peace and relaxation is as simple as sitting down and enjoying a plate of your favorite Ayam Madura. Savoring every single delicious bite of this comfort dish is always more than enough to completely clear your mind and bring you comfort after a long, tiring day.", wide: false },
@@ -162,7 +162,7 @@
       <span class="easter-egg-icon">🔒✨</span>
       <div class="easter-egg-text">
         <strong>Tonton Video Sampai Selesai 🔒</strong>
-        <span>Selesaikan videonya untuk membuka Last Surprise (Voice Note) 💖</span>
+        <span>Selesaikan videonya untuk membuka Last Surprise 💖</span>
       </div>`;
   }
 
@@ -174,7 +174,7 @@
       <span class="easter-egg-icon">🐣✨</span>
       <div class="easter-egg-text">
         <strong>Pstt... Easter Egg Terbuka! 🎁</strong>
-        <span>Sentuh di sini untuk membuka Last Surprise (Voice Note) 💖</span>
+        <span>Sentuh di sini untuk membuka Last Surprise 💖</span>
       </div>`;
   }
 
